@@ -1,6 +1,8 @@
 /* TABLE OF CONTENTS
 - Default stylings from HTML5 Boilerplate
-- Grid + Columns
+- Grid & columns
+- Palette
+- Typography defaults
 - Basic page styles
 - Site specific styles
 - Main Content
@@ -19,7 +21,7 @@
    =Default stylings from HTML5 Boilerplate
    ========================================================================== */
 /* Apply a natural box layout model to all elements - http://paulirish.com/2012/box-sizing-border-box-ftw/ */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000326}}
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -27,7 +29,7 @@
 }
 
 /* Using rem font sizing (Root em's) with fallback to px for ie8 and below - http://snook.ca/archives/html_and_css/font-size-with-rem */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000329}}
 body {
   margin: 0;
   font-size: 16px;
@@ -35,53 +37,56 @@ body {
   line-height: 1.5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000331}}
 ::-webkit-selection {
   background: #5784FE;
   color: #fff;
   text-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000330}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000332}}
 ::-moz-selection {
   background: #5784FE;
   color: #fff;
   text-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000333}}
 ::selection {
   background: #5784FE;
   color: #fff;
   text-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000335}}
 a {
   color: #333;
   text-decoration: underline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000336}}
 a:visited {
   color: #666;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000337}}
 a:hover {
   color: #b40101;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000339}}
 menu {
   padding: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000341}}
 td {
   vertical-align: top;
 }
 
+/* ==========================================================================
+   =Grid & columns
+   ========================================================================== */
 /* ==========================================================================
    Column & Row Setup
    ========================================================================== */
@@ -181,14 +186,25 @@ td {
 }
 
 /* ==========================================================================
+   =Palette
+   ========================================================================== */
+/* ==========================================================================
+   =Typography defaults
+   ========================================================================== */
+/* ==========================================================================
+   REM + PX Fallback
+   Developed by Hugo Giraudel (@HugoGiraudel)
+   Inspired by Hans Christian Reini (@drublic)
+   Refined by Moving Primates (@movingprimates) & James Kyle (@thejameskyle)
+   ========================================================================== */
+/* ==========================================================================
    =Basic page styles
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000364}}
 body {
   margin: 0 auto;
   padding: 0;
-  font: 16px/1.5 'PT Sans', Helvetica, Arial, sans-serif;
-  font-size: 1rem;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #333;
@@ -196,32 +212,32 @@ body {
 }
 
 /* Set the default behavior for touch-based browsing in IE10 on devices running Windows 8 */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000375}}
 canvas {
   -ms-touch-action: double-tap-zoom;
 }
 
 /* Make sure videos and embeds fit their containers */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000380}}
 embed, iframe, object, video {
   max-width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000384}}
 .entry-content .twitter-tweet-rendered {
   max-width: 100% !important;
   /* Override the Twitter embed fixed width */
 }
 
 /* Responsive images */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000389}}
 img {
   border: 0;
   max-width: 100%;
   height: auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000397}}
 .entry-content img,
 .comment-content img,
 .widget img {
@@ -229,7 +245,7 @@ img {
   /* Fluid images for posts, comments, and widgets */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003103}}
 img[class*="align"],
 img[class*="wp-image-"],
 img[class*="attachment-"] {
@@ -237,7 +253,7 @@ img[class*="attachment-"] {
   /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003110}}
 img.size-full,
 img.size-large,
 img.header-image,
@@ -247,7 +263,7 @@ img.wp-post-image {
   /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003116}}
 img.wp-smiley,
 .rsswidget img {
   border: 0;
@@ -259,16 +275,16 @@ img.wp-smiley,
 }
 
 /* Header */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003126}}
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Arvo', Georgia, "Times New Roman", Times, serif;
+  font-family: "Arvo", Georgia, "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: 400;
   color: #333;
   margin-top: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003134}}
 h1 {
   margin-bottom: 10px;
   margin-bottom: 0.625rem;
@@ -277,16 +293,16 @@ h1 {
   line-height: 1.25;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003140}}
 h2 {
   margin-bottom: 8px;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 1.1666;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003134}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003146}}
 h3 {
   margin-bottom: 6px;
   margin-bottom: 0.375rem;
@@ -295,7 +311,7 @@ h3 {
   line-height: 1.2857;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003153}}
 h4 {
   margin-bottom: 5px;
   margin-bottom: 0.3125rem;
@@ -304,7 +320,7 @@ h4 {
   line-height: 1.25;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003151}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003159}}
 h5 {
   margin-bottom: 5px;
   margin-bottom: 0.3125rem;
@@ -313,16 +329,16 @@ h5 {
   line-height: 1.25;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003159}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003165}}
 h6 {
   margin-bottom: 5px;
   margin-bottom: 0.3125rem;
   font-size: 14px;
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.2142;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003167}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003171}}
 hr {
   background-color: #ccc;
   border: 0;
@@ -331,12 +347,12 @@ hr {
   margin: 1.5rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003175}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003178}}
 ol, ul {
   list-style: none outside none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003182}}
 p, ol, ul, dl, address {
   margin: 0 0 24px 0;
   margin: 0 0 1.5rem 0;
@@ -345,69 +361,69 @@ p, ol, ul, dl, address {
   line-height: 1.5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003187}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003188}}
 ul ul, ul ol, ol ol, ol ul {
   margin-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003191}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003192}}
 dt {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003197}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003198}}
 b, strong {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003203}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003204}}
 em {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 400;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003209}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003210}}
 strong em, b em {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 700;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003215}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003216}}
 ins {
   background: none repeat scroll 0 0 #FFF9C0;
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003220}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003221}}
 a {
   color: #333;
   outline: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003225}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003226}}
 a:visited {
   color: #666;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003229}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003230}}
 a:focus {
   outline: thin dotted;
   color: #2997ab;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003235}}
 a:hover, a:active {
   outline: 0;
   color: #2997ab;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003239}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003240}}
 .alignleft {
   display: inline;
   float: left;
@@ -423,7 +439,7 @@ a:hover, a:active {
   margin: 0 0 1rem 1.25rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003253}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003252}}
 .aligncenter {
   clear: both;
   display: block;
@@ -433,7 +449,7 @@ a:hover, a:active {
   margin-bottom: 1rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003265}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003263}}
 blockquote:before,
 blockquote:after,
 q:before,
@@ -442,7 +458,7 @@ q:after {
   content: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003270}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003268}}
 blockquote {
   border-left: 5px solid #333;
   margin: 0 0 18px 20px;
@@ -451,7 +467,7 @@ blockquote {
   padding: 0 0 0 1rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003278}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003274}}
 blockquote.pull-right {
   border-left: 0 none;
   border-right: 5px solid #333;
@@ -462,9 +478,9 @@ blockquote.pull-right {
   float: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003288}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003282}}
 blockquote p {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: 24px;
@@ -472,19 +488,19 @@ blockquote p {
   margin-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003297}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003290}}
 blockquote.pull-right p, blockquote.pull-right small {
   text-align: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003301}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003294}}
 blockquote cite:before {
   content: "\2014 ";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003305}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003298}}
 blockquote cite {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -494,13 +510,13 @@ blockquote cite {
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003316}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003308}}
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003323}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003315}}
 caption,
 th,
 td {
@@ -508,7 +524,7 @@ td {
   text-align: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003320}}
 code, pre {
   border-radius: 3px;
   color: #555;
@@ -519,7 +535,7 @@ code, pre {
   padding: 0 0.1875rem 0.125rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003338}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003328}}
 code {
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
@@ -527,7 +543,7 @@ code {
   padding: 0.125rem 0.25rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003336}}
 abbr,
 dfn,
 acronym {
@@ -535,7 +551,7 @@ acronym {
   cursor: help;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003342}}
 sub,
 sup {
   font-size: 75%;
@@ -544,17 +560,17 @@ sup {
   vertical-align: baseline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003360}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003349}}
 sup {
   top: -0.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003353}}
 sub {
   bottom: -0.25em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003357}}
 .wp-caption {
   max-width: 100%;
   /* Keep wide captions from overflowing their container. */
@@ -562,11 +578,11 @@ sub {
   padding: 0.25rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003376}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003364}}
 .wp-caption .wp-caption-text,
 .gallery-caption,
 .entry-caption {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: 14px;
@@ -576,7 +592,7 @@ sub {
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003374}}
 img.wp-smiley, .rsswidget img {
   border: 0;
   border-radius: 0;
@@ -586,29 +602,29 @@ img.wp-smiley, .rsswidget img {
   padding: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003383}}
 .entry-content dl.gallery-item {
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003400}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003387}}
 .gallery-columns-1 .gallery-item a {
   max-width: 100%;
   width: auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003405}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003392}}
 .gallery .gallery-icon img {
   height: auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003409}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003396}}
 #primary .entry-content [id^="gallery-"] img {
   border: none;
 }
 
 /* Text meant only for screen readers */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003414}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003401}}
 .assistive-text {
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
@@ -616,9 +632,9 @@ img.wp-smiley, .rsswidget img {
   position: absolute !important;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003420}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003407}}
 .menu-toggle, button, input {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -629,13 +645,13 @@ img.wp-smiley, .rsswidget img {
   vertical-align: middle;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003432}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003418}}
 .menu-toggle, button, input {
   *overflow: visible;
   line-height: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003439}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003425}}
 .menu-toggle::-moz-focus-inner,
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -643,7 +659,7 @@ input::-moz-focus-inner {
   border: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003447}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003433}}
 button,
 input[type="button"],
 input[type="reset"],
@@ -652,12 +668,12 @@ input[type="submit"] {
   -webkit-appearance: button;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003452}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003438}}
 input[type="button"] {
   width: auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003458}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003444}}
 .menu-toggle,
 .btn,
 input[type="submit"] {
@@ -699,13 +715,13 @@ input[type="submit"] {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003497}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003481}}
 .menu-toggle, a.btn {
   color: #333333;
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003507}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003491}}
 .menu-toggle:hover,
 .btn:hover,
 .btn:active,
@@ -716,12 +732,12 @@ input[type="submit"] {
   *background-color: #d9d9d9;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003512}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003496}}
 .btn:first-child {
   *margin-left: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003518}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003502}}
 .menu-toggle:hover,
 .btn:hover,
 input[type="submit"]:hover {
@@ -738,7 +754,7 @@ input[type="submit"]:hover {
   transition: background-position 0.1s linear;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003533}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003517}}
 .menu-toggle:focus,
 .btn:focus,
 input[type="submit"]:focus {
@@ -747,7 +763,7 @@ input[type="submit"]:focus {
   outline-offset: -2px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003542}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003526}}
 .menu-toggle:active,
 .btn.active,
 .btn:active,
@@ -763,7 +779,7 @@ input[type="submit"]:active {
   top: 1px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003554}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003538}}
 .btn.disabled, .btn[disabled] {
   cursor: default;
   background-color: #e6e6e6;
@@ -775,25 +791,25 @@ input[type="submit"]:active {
   box-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003565}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003549}}
 .btn.disabled:active, .btn[disabled]:active {
   top: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003569}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003553}}
 button.btn, input[type="submit"].btn {
   *padding-top: 2px;
   *padding-bottom: 2px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003575}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003559}}
 button.btn::-moz-focus-inner,
 input[type="submit"].btn::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003581}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003565}}
 .btn-large,
 input[type="submit"].btn-large {
   padding: 10px 15px;
@@ -805,7 +821,7 @@ input[type="submit"].btn-large {
   border-radius: 5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003592}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003574}}
 .btn-small,
 input[type="submit"].btn-small {
   padding: 5px 9px;
@@ -815,7 +831,7 @@ input[type="submit"].btn-small {
 }
 
 /* Form fields */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003604}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003584}}
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -829,18 +845,18 @@ textarea {
   border-radius: 3px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003613}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003592}}
 select {
   max-width: 100%;
 }
 
 /* Small headers */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003621}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003600}}
 .archive-title,
 .page-title,
 .entry-content th,
 .comment-content th {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -852,19 +868,19 @@ select {
 /* ==========================================================================
    =Site specific styles
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003636}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003614}}
 #wrapper {
   width: 100%;
   position: relative;
   text-align: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003642}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003620}}
 #headercontainer {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003646}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003624}}
 .site-header {
   clear: both;
   width: 90%;
@@ -877,18 +893,18 @@ select {
   color: #000;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003658}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003635}}
 .site-title h1 {
   margin-top: 20px;
   margin-top: 1.25rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003663}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003639}}
 .site-title img {
   vertical-align: text-bottom;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003667}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003643}}
 .site-title a {
   color: #333;
   font-size: 64px;
@@ -896,13 +912,13 @@ select {
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003674}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003649}}
 #bannercontainer {
   width: 100%;
   margin-top: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003679}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003654}}
 .banner {
   color: #eaeaea;
   width: 90%;
@@ -913,13 +929,13 @@ select {
   min-height: 75px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003689}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003663}}
 .home .banner .widget {
   margin: 24px 0;
   margin: 1.5rem 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003699}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003672}}
 .banner h1,
 .banner h2,
 .banner h3,
@@ -929,19 +945,19 @@ select {
   color: #eaeaea;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003703}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003676}}
 .banner h1 {
   font-size: 56px;
-  font-size: 3.50rem;
+  font-size: 3.5rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003708}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003680}}
 .banner h2 {
   font-size: 32px;
   font-size: 2rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003713}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003684}}
 #maincontentcontainer .home-sidebar .widget {
   background-color: #fcfcfc;
   border: 1px solid #bbb;
@@ -954,12 +970,12 @@ select {
   padding: 0.625rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003725}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003695}}
 #maincontentcontainer {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003729}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003699}}
 .site-content {
   clear: both;
   width: 90%;
@@ -974,7 +990,7 @@ select {
   position: relative;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003743}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003711}}
 .home-sidebar {
   width: 90%;
   max-width: 1200px;
@@ -983,49 +999,49 @@ select {
   padding-bottom: 2rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003751}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003718}}
 .home.page .site-content {
   padding-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003755}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003722}}
 .home.page .site-content article {
   margin-bottom: 0;
 }
 
 /* Social Media icons */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003760}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003727}}
 .social-media-icons {
   float: right;
   text-align: right;
   height: 34px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003766}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003733}}
 .social-media-icons ul {
   list-style: none;
   margin: .5em 0 0 0;
   padding: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003772}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003739}}
 .social-media-icons li {
   display: inline-block;
   margin: 0.1em 0 0 0.6em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003777}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003744}}
 .social-media-icons a {
   color: #333;
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003782}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003749}}
 .social-media-icons a:visited {
   color: #333;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003786}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003753}}
 .social-media-icons a:hover, .social-media-icons a:active {
   color: #2997ab;
 }
@@ -1033,14 +1049,14 @@ select {
 /* ==========================================================================
    =Main Content
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003795}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003762}}
 .entry-meta {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003799}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003766}}
 .comments-link {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: 14px;
@@ -1048,24 +1064,24 @@ select {
   float: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003808}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003774}}
 .entry-header .entry-title a {
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003812}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003778}}
 .entry-header h1 a:visited {
   color: #333;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003816}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003782}}
 .entry-header h1 a:hover {
   color: #2997ab;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003820}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003786}}
 article.sticky .featured-post {
-  font-family: 'Arvo', Georgia, "Times New Roman", Times, serif;
+  font-family: "Arvo", Georgia, "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: 400;
   border-top: 4px double #aaa;
@@ -1079,12 +1095,12 @@ article.sticky .featured-post {
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003835}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003799}}
 article.sticky {
   border-bottom: 4px double #aaa;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003839}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003803}}
 .site-content article {
   margin-bottom: 40px;
   margin-bottom: 2.5rem;
@@ -1093,7 +1109,7 @@ article.sticky {
   word-wrap: break-word;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003847}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003810}}
 .header-meta {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -1104,53 +1120,53 @@ article.sticky {
   *zoom: 1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003858}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003819}}
 .header-meta:before,
 .header-meta:after {
   content: "";
   display: table;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003863}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003824}}
 .header-meta:after {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003865}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003826}}
 .header-meta a {
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003869}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003830}}
 .header-meta a:visited {
   color: #333;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003873}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003834}}
 .header-meta a:hover {
   color: #2997ab;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003877}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003838}}
 .entry-content {
   margin-bottom: 20px;
   margin-bottom: 1.25rem;
   *zoom: 1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003884}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003844}}
 .entry-content:before,
 .entry-content:after {
   content: "";
   display: table;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003889}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003849}}
 .entry-content:after {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003892}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003852}}
 .post-categories a,
 .post-tags a {
   font-size: 14px;
@@ -1165,37 +1181,37 @@ article.sticky {
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003906}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003863}}
 .post-categories a:visited,
 .post-tags a:visited {
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003911}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003868}}
 .post-categories a:hover,
 .post-tags a:hover {
   background-color: #2997ab;
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003917}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003874}}
 .entry-header address,
 .comment-content address {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 400;
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003924}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003881}}
 .entry-header address {
   display: inline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003929}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003886}}
 .entry-header time,
 .entry-header address {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: 14px;
@@ -1204,14 +1220,14 @@ article.sticky {
   margin: 0 1.25rem 0 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003939}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003894}}
 .page-links {
   clear: both;
   line-height: 1.75;
   color: #333;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003945}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003900}}
 .page-links .page-numbers {
   background-color: #333;
   border: 1px solid #333;
@@ -1220,50 +1236,50 @@ article.sticky {
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003953}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003907}}
 .page-links a {
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003957}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003911}}
 .page-links a .page-numbers {
   background-color: transparent;
   color: #333;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003962}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003916}}
 .page-links a:hover .page-numbers {
   background-color: #2997ab;
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003967}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003921}}
 .more-link {
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003971}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003925}}
 .post-edit-link {
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003976}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003930}}
 .entry-content dl,
 .comment-content dl {
   margin: 0 24px;
   margin: 0 1.5rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003982}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003935}}
 .entry-content dt,
 .comment-content dt {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: 1.5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003990}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003943}}
 .entry-content dd,
 .comment-content dd {
   line-height: 1.5;
@@ -1271,7 +1287,7 @@ article.sticky {
   margin-bottom: 1.5rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003997}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003949}}
 .entry-content table,
 .comment-content table {
   border-bottom: 1px solid #ccc;
@@ -1283,7 +1299,7 @@ article.sticky {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031008}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003958}}
 .entry-content table caption,
 .comment-content table caption {
   font-size: 16px;
@@ -1292,7 +1308,7 @@ article.sticky {
   margin: 1.5rem 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031016}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003964}}
 .entry-content td,
 .comment-content td {
   border-top: 1px solid #ccc;
@@ -1300,7 +1316,7 @@ article.sticky {
   padding: 0.375rem 0.625rem 0.375rem 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031025}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003972}}
 .entry-content ol,
 .comment-content ol,
 .entry-content ul,
@@ -1311,7 +1327,7 @@ article.sticky {
   padding: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031039}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003985}}
 .entry-content ul ul,
 .comment-content ul ul,
 .entry-content ol ol,
@@ -1323,19 +1339,19 @@ article.sticky {
   margin-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031044}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003990}}
 .entry-content ul,
 .comment-content ul {
   list-style: disc outside;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031049}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\00003995}}
 .entry-content ol,
 .comment-content ol {
   list-style: decimal outside;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031054}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031000}}
 .entry-content li,
 .comment-content li {
   margin: 0 0 0 28px;
@@ -1343,13 +1359,13 @@ article.sticky {
 }
 
 /* Author profiles */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031060}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031005}}
 .author .archive-header {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031065}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031009}}
 .author-info {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -1361,25 +1377,25 @@ article.sticky {
   *zoom: 1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031077}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031019}}
 .author-info:before,
 .author-info:after {
   content: "";
   display: table;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031082}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031024}}
 .author-info:after {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031084}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031026}}
 .author-description h2 {
   font-size: 24px;
   font-size: 1.5rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031089}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031030}}
 .author-description p {
   color: #777;
   font-size: 14px;
@@ -1389,24 +1405,24 @@ article.sticky {
   margin-bottom: 0.5rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031098}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031037}}
 .author-link {
   font-size: 14px;
   font-size: 0.875rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031041}}
 .author-link a {
   color: #777;
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031108}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031046}}
 .author-link a:visited {
   color: #666;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031114}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031052}}
 .author-link a:focus,
 .author-link a:hover,
 .author-link a:active {
@@ -1414,37 +1430,37 @@ article.sticky {
   color: #2997ab;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031057}}
 .author.archive .author-info {
   border-top: 0;
   margin: 0 0 48px;
   margin: 0 0 3rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031125}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031062}}
 .author.archive .author-avatar {
   margin-top: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031129}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031066}}
 .author.archive .author-link {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031133}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031070}}
 .author-avatar {
   float: left;
   margin-top: 8px;
   margin-top: 0.5rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031075}}
 .author-description {
   float: right;
   width: 80%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031144}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031080}}
 .social-meta a {
   text-decoration: none;
   margin-right: 5px;
@@ -1454,7 +1470,7 @@ article.sticky {
 /* ==========================================================================
    =Post Formats
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031155}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031090}}
 .entry-media {
   margin: 0 auto 16px;
   margin: 0 auto 1rem;
@@ -1462,7 +1478,7 @@ article.sticky {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031164}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031098}}
 .entry-media .wp-caption,
 .entry-media .wp-caption-text,
 .entry-media [class*="align"] {
@@ -1470,19 +1486,19 @@ article.sticky {
 }
 
 /* Aside */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031169}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031103}}
 .format-aside .entry-content {
   margin: 20px 0 18px 0;
   margin: 1.25rem 0 1.125rem 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031174}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031107}}
 .format-aside .entry-content p:last-child {
   margin-bottom: 0;
 }
 
 /* Status */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031112}}
 .format-status .entry-content {
   border-left: 5px solid #ddd;
   margin: 20px 0 18px 0;
@@ -1491,20 +1507,20 @@ article.sticky {
   padding: 0 0 0 0.9375rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031187}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031118}}
 .format-status .entry-content p {
   font-size: 20px;
   font-size: 1.25rem;
   font-style: italic;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031193}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031123}}
 .format-status .entry-content p:last-child {
   margin-bottom: 0;
 }
 
 /* Quote */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031198}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031128}}
 .format-quote .entry-content blockquote:before {
   font-family: 'FontAwesome';
   font-weight: normal;
@@ -1521,14 +1537,14 @@ article.sticky {
   z-index: -1;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031214}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031143}}
 .format-quote .entry-content {
   margin-top: 24px;
   margin-top: 1.5rem;
   position: relative;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031220}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031148}}
 .format-quote .entry-content blockquote {
   border: none;
   margin-left: 40px;
@@ -1536,7 +1552,7 @@ article.sticky {
 }
 
 /* Audio */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031227}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031154}}
 .format-audio .wp-audio-shortcode {
   margin-bottom: 16px;
   margin-bottom: 1rem;
@@ -1545,7 +1561,7 @@ article.sticky {
 /* ==========================================================================
    =Archives
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031238}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031164}}
 .archive-header,
 .page-header {
   margin-bottom: 32px;
@@ -1553,9 +1569,9 @@ article.sticky {
   border-bottom: 1px solid #CCCCCC;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031244}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031169}}
 .archive-meta {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 400;
   color: #777;
@@ -1569,7 +1585,7 @@ article.sticky {
 /* ==========================================================================
    =Comments
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031261}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031184}}
 .comments-title {
   margin-bottom: 48px;
   margin-bottom: 3rem;
@@ -1579,7 +1595,7 @@ article.sticky {
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031270}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031191}}
 .comments-area article {
   padding-bottom: 16px;
   padding-bottom: 1rem;
@@ -1588,7 +1604,7 @@ article.sticky {
   border-bottom: 1px solid #ccc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031278}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031197}}
 .comments-area article header {
   margin: 0 0 24px;
   margin: 0 0 1.5rem;
@@ -1596,14 +1612,14 @@ article.sticky {
   position: relative;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031285}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031203}}
 .comments-area article header img {
   float: left;
   padding: 0;
   line-height: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031292}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031210}}
 .comments-area article header cite,
 .comments-area article header time {
   display: block;
@@ -1611,7 +1627,7 @@ article.sticky {
   margin-left: 5.25rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031297}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031214}}
 .comments-area article header cite {
   font-style: normal;
   font-size: 16px;
@@ -1619,9 +1635,9 @@ article.sticky {
   line-height: 1.5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031304}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031220}}
 .comments-area article header time {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 400;
   line-height: 1.8;
@@ -1631,28 +1647,28 @@ article.sticky {
   color: #5e5e5e;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031230}}
 .comments-area article header a {
   text-decoration: none;
   color: #5e5e5e;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031320}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031235}}
 .comments-area article header a:hover {
   color: #21759b;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031239}}
 .comments-area article header cite a {
   color: #444;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031328}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031243}}
 .comments-area article header cite a:hover {
   text-decoration: underline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031247}}
 .comments-area article header h4 {
   position: absolute;
   top: 0;
@@ -1674,7 +1690,7 @@ article.sticky {
   border: 1px solid #007cbd;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031266}}
 .comments-area li.bypostauthor cite span {
   position: absolute;
   margin-left: 6px;
@@ -1685,7 +1701,7 @@ article.sticky {
   font-size: 0.75rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031273}}
 a.comment-reply-link {
   font-size: 14px;
   font-size: 0.875rem;
@@ -1694,12 +1710,12 @@ a.comment-reply-link {
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031280}}
 a.comment-reply-link:hover {
   color: #21759b;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031284}}
 .commentlist .pingback {
   line-height: 1.8;
   margin-bottom: 24px;
@@ -1707,25 +1723,25 @@ a.comment-reply-link:hover {
   padding-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031290}}
 .commentlist .children {
   margin-left: 48px;
   margin-left: 3rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031294}}
 .commentlist {
   padding-left: 0;
 }
 
 /* Comment form */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031299}}
 #respond {
   margin-top: 48px;
   margin-top: 3rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031303}}
 #respond h3#reply-title #cancel-comment-reply-link {
   margin-left: 12px;
   margin-left: 0.75rem;
@@ -1734,31 +1750,31 @@ a.comment-reply-link:hover {
   font-size: 0.75rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031405}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031309}}
 #respond form {
   margin: 24px 0 32px 0;
   margin: 1.5rem 0 2rem 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031410}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031313}}
 #respond form p {
   margin: 12px 0;
   margin: 0.75rem 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031415}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031317}}
 #respond form p.logged-in-as {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031420}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031321}}
 #respond form label {
   display: block;
   line-height: 1.8;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031426}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031327}}
 #respond form input[type="text"],
 #respond form textarea {
   font-family: inherit;
@@ -1772,12 +1788,12 @@ a.comment-reply-link:hover {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031438}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031337}}
 #respond form input[type="text"] {
   width: 48%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031442}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031341}}
 #respond form p.form-allowed-tags {
   margin: 0;
   font-size: 12px;
@@ -1786,22 +1802,22 @@ a.comment-reply-link:hover {
   color: #5e5e5e;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031450}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031348}}
 #respond form p.form-allowed-tags code {
   background: none;
   border: none;
   color: #5e5e5e;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031457}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031355}}
 label .required,
 span.required {
   color: #bb0504;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031461}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031359}}
 form label.error {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   display: block;
@@ -1815,7 +1831,7 @@ form label.error {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031476}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031371}}
 #respond form label.error {
   line-height: 1.3;
 }
@@ -1823,12 +1839,12 @@ form label.error {
 /* ==========================================================================
    =Footer
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031484}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031379}}
 #footercontainer {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031488}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031383}}
 .site-footer {
   clear: both;
   width: 90%;
@@ -1841,62 +1857,62 @@ form label.error {
   color: #999;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031500}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031393}}
 .site-footer h3 {
   color: #ccc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031504}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031397}}
 .site-footer a {
   color: #999;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031508}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031401}}
 .site-footer a:visited {
   color: #999;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031512}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031405}}
 .site-footer a:hover {
   color: #2997ab;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031516}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031409}}
 .site-footer a:focus {
   outline: thin dotted;
   color: black;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031521}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031414}}
 .site-footer .widget-area .widget {
   margin-bottom: 16px;
   margin-bottom: 1rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031526}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031418}}
 .smallprint {
   color: #999;
   width: 90%;
   max-width: 1200px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031532}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031424}}
 .smallprint p {
   font-size: 14px;
   font-size: 0.875rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031537}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031428}}
 .smallprint a {
   color: #555;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031541}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031432}}
 .smallprint a:visited {
   color: #555;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031545}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031436}}
 .smallprint a:hover {
   color: #2997ab;
 }
@@ -1904,13 +1920,13 @@ form label.error {
 /* ==========================================================================
    =Widgets
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031554}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031445}}
 .widget-area ul {
   list-style: none outside none;
   padding-left: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031559}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031450}}
 .widget-area .widget {
   overflow: hidden;
   -moz-hyphens: auto;
@@ -1923,25 +1939,25 @@ form label.error {
   margin-bottom: 3rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031571}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031461}}
 .widget select {
   margin-left: 1px;
   margin-left: 0.0625rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031576}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031465}}
 .widget-area .widget ul ul {
   margin-left: 12px;
   margin-left: 0.75rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031581}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031469}}
 .widget_rss li {
   margin: 12px 0;
-  margin: 0.75rem;
+  margin: 0.75rem 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031587}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031474}}
 .widget_recent_entries .post-date,
 .widget_rss .rss-date {
   font-size: 12px;
@@ -1950,7 +1966,7 @@ form label.error {
   margin-left: 0.75rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031594}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031479}}
 #wp-calendar {
   margin: 0;
   width: 100%;
@@ -1959,47 +1975,47 @@ form label.error {
   line-height: 2;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031604}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031488}}
 #wp-calendar th,
 #wp-calendar td,
 #wp-calendar caption {
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031608}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031492}}
 #wp-calendar thead {
   border-top: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031613}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031497}}
 #wp-calendar caption {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
   text-align: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031621}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031505}}
 #wp-calendar #today {
   background-color: #ddd;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031625}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031509}}
 #wp-calendar tfoot {
   border-top: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031630}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031514}}
 #wp-calendar #next {
   padding-right: 24px;
   padding-right: 1.5rem;
   text-align: right;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031636}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031519}}
 .widget_search label {
   display: block;
   font-size: 14px;
@@ -2007,12 +2023,12 @@ form label.error {
   line-height: 1.5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031643}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031525}}
 .widget_twitter li {
   list-style-type: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031647}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031529}}
 .widget_twitter .timesince {
   display: block;
   text-align: right;
@@ -2021,30 +2037,30 @@ form label.error {
 /* ==========================================================================
    =Content Navigation
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031657}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031539}}
 .site-content nav {
   clear: both;
   line-height: 2;
   overflow: hidden;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031663}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031545}}
 #nav-above {
   padding: 24px;
   padding: 1.5rem;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031668}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031549}}
 #nav-above {
   display: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031672}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031553}}
 .paged #nav-above {
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031677}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031558}}
 .nav-previous,
 .previous-image {
   float: left;
@@ -2052,13 +2068,13 @@ form label.error {
   line-height: 1.3;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031684}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031565}}
 .nav-previous a,
 .nav-next a {
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031689}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031570}}
 .nav-next,
 .next-image {
   float: right;
@@ -2067,14 +2083,14 @@ form label.error {
   line-height: 1.3;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031697}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031578}}
 .nav-single + .comments-area,
 #comment-nav-above {
   margin: 48px 48px 48px 0;
   margin: 3rem 3rem 3rem 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031702}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031582}}
 ul.page-numbers {
   padding: 0;
   margin: 0;
@@ -2082,7 +2098,7 @@ ul.page-numbers {
   line-height: 2;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031710}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031590}}
 li a.page-numbers,
 li span.page-numbers {
   padding: 5px;
@@ -2091,36 +2107,36 @@ li span.page-numbers {
   text-decoration: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031717}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031596}}
 li a:visited.page-numbers {
   color: #333;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031721}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031600}}
 li a:hover.page-numbers {
   background-color: #2997ab;
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031727}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031606}}
 li a:hover.prev,
 li a:hover.next {
   background-color: transparent;
   color: #2997ab;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031732}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031611}}
 .page-numbers li {
   display: inline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031736}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031615}}
 li span.current {
   background-color: #333;
   color: #fff;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031743}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031622}}
 li a.prev,
 li a.next,
 li span.dots {
@@ -2130,7 +2146,7 @@ li span.dots {
 /* ==========================================================================
    =Main Navigation
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031752}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031631}}
 .main-navigation {
   text-align: left;
   float: right;
@@ -2139,16 +2155,16 @@ li span.dots {
   margin: 2.8125rem 0 0 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031760}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031638}}
 .main-navigation h1 {
   font-size: 32px;
   font-size: 2rem;
   line-height: 1.25;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031766}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031643}}
 .nav-menu {
-  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -2156,28 +2172,28 @@ li span.dots {
   line-height: 1.5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031775}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031651}}
 .main-navigation ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031781}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031657}}
 .main-navigation li {
   float: left;
   position: relative;
   margin: 0 0 0 20px;
-  /* Margin on the left side of each top level menu item (since it's floated right) */
   margin: 0 0 0 1.25rem;
+  /* Margin on the left side of each top level menu item (since it's floated right) */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031788}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031663}}
 .main-navigation ul ul li {
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031792}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031667}}
 .main-navigation li.menu-parent-item > a:after {
   /* If you don't want the arrows on the top level drop down, simply remove this style */
   font-family: 'FontAwesome';
@@ -2190,7 +2206,7 @@ li span.dots {
   content: " \f078";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031803}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031677}}
 .main-navigation ul li li.menu-parent-item > a:after {
   /* If you don't want the arrows on the sub-menu options, simply remove this style */
   font-family: 'FontAwesome';
@@ -2203,20 +2219,20 @@ li span.dots {
   content: " \f054";
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031814}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031687}}
 .main-navigation ul a {
   padding: 0;
   /* Padding around each top level menu option (if needed) */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031818}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031691}}
 .main-navigation ul ul a {
   padding: 0 5px;
-  /* Padding around each dropdown menu option */
   padding: 0 0.3125rem;
+  /* Padding around each dropdown menu option */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031823}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031695}}
 .main-small-navigation a, .main-navigation a {
   display: block;
   text-decoration: none;
@@ -2224,7 +2240,7 @@ li span.dots {
   /* Nav bar link color */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031829}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031701}}
 .main-navigation ul ul {
   display: none;
   position: absolute;
@@ -2237,13 +2253,13 @@ li span.dots {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.6);
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031840}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031712}}
 .main-navigation ul ul ul {
   left: 100%;
   top: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031845}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031717}}
 .main-navigation ul ul a {
   color: #fff;
   /* Nav bar dropdown link color */
@@ -2251,13 +2267,13 @@ li span.dots {
   /* Nav bar dropdown width */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031853}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031725}}
 .main-navigation li:hover > a {
   color: #2997ab;
   /* Nav bar link color on hover */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031857}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031729}}
 .main-navigation ul ul :hover > a {
   color: #333;
   /* Nav bar dropdown level 2 link color on level 3 hover */
@@ -2265,18 +2281,18 @@ li span.dots {
   /* Nav bar dropdown link background color on hover */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031862}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031734}}
 .main-navigation ul ul a:hover {
   color: #2997ab;
   /* Nav bar dropdown link color on hover */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031866}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031738}}
 .main-navigation ul li:hover > ul {
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031877}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031749}}
 .main-navigation .current-menu-item > a,
 .main-navigation .current-menu-ancestor > a,
 .main-navigation .current_page_item > a,
@@ -2285,7 +2301,7 @@ li span.dots {
   /* Nav bar link color for current menu item or ancestor */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031881}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031753}}
 .main-navigation ul .divider {
   border-bottom: 1px solid #aaa;
   height: 0;
@@ -2293,7 +2309,7 @@ li span.dots {
   overflow: hidden;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031889}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031761}}
 .main-navigation ul li.dropdown-header a,
 .main-navigation ul li.current-menu-item ul .dropdown-header a {
   color: #aaa;
@@ -2303,12 +2319,12 @@ li span.dots {
 }
 
 /* Small menu toggle for mobile devices */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031895}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031767}}
 .menu-toggle {
   cursor: pointer;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031899}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031771}}
 .main-small-navigation .nav-menu {
   display: none;
 }
@@ -2318,85 +2334,85 @@ li span.dots {
    ========================================================================== */
 /*  Breakpoints are set based on the design, not based on device sizes */
 @media only screen and (max-width: 1100px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031910}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031782}}
   .site-title a {
     font-size: 52px;
     font-size: 3.25rem;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031914}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031785}}
   .banner h1 {
     font-size: 44px;
     font-size: 2.75rem;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031918}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031788}}
   .banner h2 {
     font-size: 24px;
     font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 980px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031925}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031794}}
   .main-navigation {
     margin: 38px 0 0 0;
     margin: 2.375rem 0 0 0;
   }
 }
 @media only screen and (max-width: 900px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031932}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031800}}
   .banner .grid_6_of_12 {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031935}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031803}}
   .banner h1, .banner h2, .banner p {
     text-align: center;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031938}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031806}}
   .main-navigation {
     margin: 32px 0 0 0;
     margin: 2rem 0 0 0;
   }
 }
 @media only screen and (max-width: 800px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031945}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031812}}
   header .grid_5_of_12 {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031948}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031815}}
   header .grid_7_of_12 {
     width: 100%;
     margin-left: 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031952}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031819}}
   header .main-navigation {
     margin-top: 0;
     float: none;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031956}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031823}}
   .main-navigation .nav-menu > li:first-child {
     margin-left: 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031959}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031826}}
   .social-media-icons {
     float: none;
     text-align: left;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031963}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031830}}
   .social-media-icons li {
     margin: 0.1em 0.5em 0 0;
   }
 }
 /*  Go full Width at less than 650px */
 @media only screen and (max-width: 650px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031981}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031848}}
   .grid_1_of_12,
   .grid_2_of_12,
   .grid_3_of_12,
@@ -2412,17 +2428,17 @@ li span.dots {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031984}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031851}}
   .col {
     margin: 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031987}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031854}}
   .main-small-navigation .nav-menu, .nav-menu ul {
     padding: 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031990}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031857}}
   .main-small-navigation .nav-menu ul {
     padding-left: 16px;
     padding-left: 1rem;
@@ -2430,12 +2446,12 @@ li span.dots {
 }
 /*  Adjust the menu at less than 520px */
 @media only screen and (max-width: 520px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031999}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031865}}
   .site-title h1 {
     text-align: center;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032005}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031871}}
   .main-small-navigation .nav-menu,
   .main-small-navigation .nav-menu ul,
   .nav-menu,
@@ -2443,18 +2459,18 @@ li span.dots {
     padding: 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032009}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031875}}
   .main-small-navigation,
   .main-navigation li {
     width: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032012}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031878}}
   .main-small-navigation {
     text-align: center;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032016}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031882}}
   .main-small-navigation ul li,
   .main-navigation ul li {
     background-color: #fff;
@@ -2462,17 +2478,17 @@ li span.dots {
     text-align: center;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032021}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031887}}
   .main-navigation ul ul, .main-navigation ul ul li ul {
     position: relative;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032024}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031890}}
   .main-navigation ul ul li ul {
     left: 0;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032027}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031893}}
   .main-navigation ul ul a {
     color: #fff;
     /* Nav bar dropdown link color */
@@ -2482,13 +2498,13 @@ li span.dots {
     /* Nav bar dropdown width */
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032032}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031898}}
   .social-media-icons {
     text-align: center;
   }
 }
 @media only screen and (max-width: 320px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032038}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031904}}
   .author-description {
     float: left;
     width: 100%;
@@ -2499,7 +2515,7 @@ li span.dots {
    Please define your styles before this section.
    ========================================================================== */
 /* For image replacement */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032051}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031917}}
 .ir {
   display: block;
   border: 0;
@@ -2512,20 +2528,20 @@ li span.dots {
   *line-height: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032052}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031918}}
 .ir br {
   display: none;
 }
 
 /* Hide from both screenreaders and browsers: h5bp.com/u */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032055}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031921}}
 .hidden {
   display: none !important;
   visibility: hidden;
 }
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032058}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031924}}
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -2538,7 +2554,7 @@ li span.dots {
 }
 
 /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032061}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031927}}
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
@@ -2549,24 +2565,24 @@ li span.dots {
 }
 
 /* Hide visually and from screenreaders, but maintain layout */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032064}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031930}}
 .invisible {
   visibility: hidden;
 }
 
 /* Contain floats: h5bp.com/q */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032067}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031933}}
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032068}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031934}}
 .clearfix:after {
   clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032069}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031935}}
 .clearfix {
   *zoom: 1;
 }
@@ -2576,7 +2592,7 @@ li span.dots {
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 @media print {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032078}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031944}}
   * {
     background: transparent !important;
     color: black !important;
@@ -2587,45 +2603,45 @@ li span.dots {
   }
 
   /* Black prints faster: h5bp.com/s */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032079}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031945}}
   a, a:visited {
     text-decoration: underline;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032080}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031946}}
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032081}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031947}}
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032082}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031948}}
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
     content: "";
   }
 
   /* Don't show links for images, or javascript/internal links */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032083}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031949}}
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032084}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031950}}
   thead {
     display: table-header-group;
   }
 
   /* h5bp.com/t */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032085}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031951}}
   tr, img {
     page-break-inside: avoid;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032086}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031952}}
   img {
     max-width: 100% !important;
   }
@@ -2634,13 +2650,13 @@ li span.dots {
     margin: 0.5cm;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032088}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031954}}
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000032089}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/xampplite\/htdocs\/bnia\/WordPress\/wp-content\/themes\/Quark\/styles\/theme\.scss}line{font-family:\000031955}}
   h2, h3 {
     page-break-after: avoid;
   }
