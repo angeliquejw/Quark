@@ -8,9 +8,9 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content row" role="main">
+	<div class="site-content" role="main">
 
-			<div class="col grid_8_of_12">
+		<div id="primary">
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -27,9 +27,9 @@ get_header(); ?>
 
 				<?php endwhile; // end of the loop. ?>
 
-			</div> <!-- /.col.grid_8_of_12 -->
-			<?php get_sidebar(); ?>
+		</div> <!-- /#primary -->
+		<?php get_sidebar(); ?>
 
-	</div> <!-- /#primary.site-content.row -->
+	</div> <!-- /.site-content -->
 
 <?php get_footer(); ?>

@@ -1,6 +1,6 @@
 /* TABLE OF CONTENTS
 - Default stylings from HTML5 Boilerplate
-- Grid & columns
+- Grid & layout
 - Palette
 - Typography defaults
 - Basic page styles
@@ -41,9 +41,10 @@ menu { padding: 0; }
 td { vertical-align: top; }
 
 /* ==========================================================================
-   =Grid & columns
+   =Grid & layout
    ========================================================================== */
 @import "grid.scss";
+@import "layout.scss";
 
 /* ==========================================================================
    =Palette
@@ -725,7 +726,6 @@ select {
 
 /* Social Media icons */
 .social-media-icons {
-	float: right;
 	text-align: right;
 	height: 34px;
 }
@@ -1930,9 +1930,11 @@ li span.dots {
 .invisible { visibility: hidden; }
 
 /* Contain floats: h5bp.com/q */
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
+.clearfix {
+   *zoom: 1;
+   &:before, &:after { content: ""; display: table; }
+   &:after { clear: both; }
+}
 
 
 /* ==========================================================================

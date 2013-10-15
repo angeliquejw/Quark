@@ -11,8 +11,9 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content row" role="main">
-		<div class="col grid_12_of_12">
+	<div class="site-content" role="main">
+
+		<div id="primary">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -23,7 +24,8 @@ get_header(); ?>
 
 			<?php endif; // end have_posts() check ?>
 
-		</div> <!-- /.col.grid_12_of_12 -->
-	</div><!-- /#primary.site-content.row -->
+		</div> <!-- /#primary -->
+
+	</div> <!-- /.site-content -->
 
 <?php get_footer(); ?>

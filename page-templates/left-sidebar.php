@@ -10,10 +10,9 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content row" role="main">
+	<div class="site-content" role="main">
 
-		<?php get_sidebar(); ?>
-		<div class="col grid_8_of_12">
+		<div id="primary">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -30,8 +29,9 @@ get_header(); ?>
 
 			<?php endif; // end have_posts() check ?>
 
-		</div> <!-- /.col.grid_8_of_12 -->
+		</div> <!-- /#primary -->
+		<?php get_sidebar(); ?>
 
-	</div> <!-- /#primary.site-content.row -->
+	</div> <!-- /.site-content -->
 
 <?php get_footer(); ?>

@@ -1,0 +1,50 @@
+.site-header, .banner, .site-content, .site-footer, .small-print
+{ @include container(); }
+
+/* =HEADER */
+
+.site-title { @include column(5); }
+
+.social-media-icons, .site-navigation {
+   @include column(7);
+   @include push(5); }
+
+/* =CONTENT */
+
+#primary {
+   @include column(8);
+   .page-template-page-templatesfull-width-php & { @include column(12); }
+   .page-template-page-templatesleft-sidebar-php & { @include push(4); }
+}
+
+/* =SIDEBAR */
+
+#secondary {
+   @include column(4);
+   @include push(8);
+   .page-template-page-templatesfront-page-php & {
+      @include column(12);
+      @include push(0); }
+   .page-template-page-templatesleft-sidebar-php & { @include push(0); }
+}
+
+/* =WIDGETS */
+
+.widget-area {
+   .total_widget-areas_1 & { @include column(12); }
+   .total_widget-areas_2 & {
+      @include column(6);
+      &:last-child { @include push(6); }
+   }
+   .total_widget-areas_3 & {
+      @include column(4);
+      &:nth-child(2) { @include push(4); }
+      &:nth-child(3) { @include push(8); }
+   }
+   .total_widget-areas_4 & {
+      @include column(3);
+      &:nth-child(2) { @include push(3); }
+      &:nth-child(3) { @include push(6); }
+      &:nth-child(4) { @include push(9); }
+   }
+}

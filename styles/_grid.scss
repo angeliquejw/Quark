@@ -1,44 +1,197 @@
-/* ==========================================================================
-   Column & Row Setup
-   ========================================================================== */
+/**
+ * Profound Grid
+ *
+ * Built in Sass (SCSS) this responsive/adaptive grid supports both fixed and fluid layouts,
+ * relative and fixed gutters, as well as your choice of semantic markup or generic '.grid-x' classes.
+ *
+ * The biggest difference to other grid systems is the use of negative margins for column
+ * placements, avoiding the subpixel rounding issues that usually break/uglify fluid layouts
+ * in some browsers.
+ *
+ * Nested columns are supported too, without having to reset the grid on each level.
+ *
+ * Credits/Inspiration:
+ * -------------------
+ * Semantic Grid: http://www.semantic.gs
+ * Susy: http://susy.oddbird.net
+ * Negative Grid: http://chrisplaneta.com/freebies/negativegrid-fluid-css-grid-by-chris-planeta/
+ *
+ * @author Profound Creative Studio
+ * @url http://www.profoundgrid.com
+ * @url http://www.weareprofound.com
+ */
 
-.col {
-	display: block;
-	float:left;
-	margin: 0 0 0 1.6%;
+ ////////////////////////////////////////////////////////////////////////////////
+// Defaults (feel free to override)
+////////////////////////////////////////////////////////////////////////////////
+
+$total_columns: 	   12;			// 				//
+$total_width:	   	100%; 		// px|100% 		// px = fixed, 100% = fluid
+$gutter_width:		   1%;			// px|%			// px = fixed, % = fluid
+$container_margin:	1%;			// auto|px|%	//
+
+$class_container:	   'row';		//				//
+$class_column:		   'col';		//				//
+$class_push:		   'push';		//				//
+
+
+////////////////////////////////////////////////////////////////////////////////
+// GRID MATH
+////////////////////////////////////////////////////////////////////////////////
+
+@function element_width($column_index){
+	@if ($total_width == 100%){
+	  	$not_rounded_value: (((100% + $gutter_width)/$total_columns)*$column_index)-$gutter_width;
+	    $not_rounded_value: $not_rounded_value * 100;
+	    $rounded_value: round($not_rounded_value)/100;
+	    @return $rounded_value;
+	}@else{
+		@return ((($total_width + $gutter_width)/$total_columns)*$column_index)-$gutter_width;
+	}
 }
 
-/* Remove the margin on the first column. Works on all browsers incl. IE7+ */
-.col:first-child { margin-left: 0; }
-
-.row {
-	clear: both;
-	margin: 0 auto;
-	*zoom: 1;
+@function column_width(){
+	@if ($total_width == 100%){
+	  	$not_rounded_value: (((100 + $gutter_width)/$total_columns))-$gutter_width;
+	    $not_rounded_value: $not_rounded_value * 100;
+	    $rounded_value: round($not_rounded_value)/100;
+	    @return $rounded_value * 1%;
+	}@else{
+		@return ($total_width - ($gutter_width*($total_columns - 1)))/$total_columns;
+	}
 }
 
-.row:before,
-.row:after {
-	content: "";
-	display: table;
+@function container_width(){
+	@if ($total_width == 100%){
+		@if ($container_margin == auto){
+			@return 100%;
+		}
+		@return 100% - 2*$container_margin;
+	} @else {
+		@return $total_width;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+// BASIC MIXINS
+////////////////////////////////////////////////////////////////////////////////
+/**
+ * Establish the grid-containing element.
+ */
+@mixin container(){
+   clear:both;
+	width: container_width();
+	margin: 0 $container_margin;
+   @extend .clearfix;
 }
 
-.row:after { clear: both; }
+/**
+ * Align an element to the grid.
+ */
+@mixin column($_columns_width, $_padding_columns:null){
+	float: left;
+	margin-right: -100%;
+	$_width_perc: element_width($_columns_width);
+    width: $_width_perc;
+
+    @if($_padding_columns != null){
+    	@include push($_padding_columns);
+    }
+}
 
 
-/* ==========================================================================
-   Twelve Column Grid
-   ========================================================================== */
+////////////////////////////////////////////////////////////////////////////////
+// MARGIN MIXINS
+////////////////////////////////////////////////////////////////////////////////
 
-.grid_12_of_12 { width: 100%; }
-.grid_11_of_12 { width: 91.46%; }
-.grid_10_of_12 { width: 83%; }
-.grid_9_of_12  { width: 74.54%; }
-.grid_8_of_12  { width: 66.08%; }
-.grid_7_of_12  { width: 57.62%; }
-.grid_6_of_12  { width: 49.16%; }
-.grid_5_of_12  { width: 40.7%; }
-.grid_4_of_12  { width: 32.24%; }
-.grid_3_of_12  { width: 23.78%; }
-.grid_2_of_12  { width: 15.32%; }
-.grid_1_of_12  { width: 6.86%; }
+@mixin push($_column_index){
+	$_width_perc: 0;
+	@if ($total_width == 100%){
+		$_width_perc: ($gutter_width + element_width($_column_index));
+	}@else{
+		//$_width_perc: (column_width() + $gutter_width)*$_column_index;
+		$_width_perc: ($gutter_width + element_width($_column_index));
+	}
+
+	margin-left: $_width_perc;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// HELPER CLASSES
+////////////////////////////////////////////////////////////////////////////////
+
+@mixin generate_helper_classes(){
+
+	/* Helper Class: Container */
+	.#{$class_container}{
+		@include container();
+	}
+
+	/* Helper Class: Columns */
+	@for $i from 1 through $total_columns{
+		.#{$class_column}#{$i} {
+			@include column($i)
+		}
+	}
+
+	/* Helper Class: Horizontal Position */
+	@for $i from 0 through ($total_columns - 1){
+		.#{$class_push}#{$i} {
+			@include push($i);
+		}
+	}
+
+}
+
+@mixin generate_grid_positions($_column_selector, $_element_width){
+
+	$_cols_per_row: floor($total_columns / $_element_width);
+
+	// create rule for each element
+	@for $i from 1 through $_cols_per_row{
+
+		#{$_column_selector}:nth-child(#{$_cols_per_row}n+#{$i}){
+			@include push((($i - 1)*$_element_width));
+			margin-bottom: $gutter_width;
+
+			@if ($i == 1) {
+				@extend .clearfix;
+			}@else{
+				clear: none;
+			}
+		}
+	}
+}
+
+@mixin generate_grid_positions_legacy($_column_selector, $_element_width, $_elements_in_grid:$total_columns){
+
+	$_cols_per_row: floor($total_columns / $_element_width);
+	$_current_col:1;
+
+	// create rule for each element
+	@for $i from 1 through $_elements_in_grid{
+
+		$selector: #{$_column_selector};
+		@for $ii from 2 through $i{
+			$selector: #{$selector}+#{$_column_selector};
+		}
+
+
+		#{$selector}{
+			@include push((($_current_col - 1)*$_element_width));
+			margin-bottom: $gutter_width;
+
+			@if ($_current_col == 1) {
+				clear: both;
+				@extend .clearfix;
+			}@else{
+				clear: none;
+			}
+
+			$_current_col: $_current_col + 1;
+			@if ($_current_col > $_cols_per_row){
+				$_current_col:1;
+			}
+		}
+	}
+}

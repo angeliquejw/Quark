@@ -8,9 +8,9 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content row" role="main">
+	<div class="site-content" role="main">
 
-		<div class="col grid_12_of_12">
+		<div id="primary">
 
 			<article id="post-0" class="post error404 no-results not-found">
 				<header class="entry-header">
@@ -22,8 +22,8 @@ get_header(); ?>
 				</div><!-- /.entry-content -->
 			</article><!-- /#post -->
 
-		</div> <!-- /.col.grid_12_of_12 -->
+		</div> <!-- /#primary -->
 
-	</div> <!-- /#primary.site-content.row -->
+	</div> <!-- /.site-content -->
 
 <?php get_footer(); ?>
